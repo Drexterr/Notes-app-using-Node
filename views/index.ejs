@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body><div class="bg-zinc-900 h-screen p-10">
+    <form class="" action="/create" method="post">
+        <input name = "title" class="text-white  block border-2 border-zinc-500 rounded-2xl px-2 py-1 w-full" type="text" placeholder="Enter title">
+        <textarea name = "info"   class="text-white block  mt-3 border-2 border-zinc-500 rounded-2xl px-2 py-1 resize-none w-full" placeholder="Enter notes"></textarea>
+        <button class="text-zinc-900 mt-3 border-2 border-zinc-500 rounded-2xl px-3 py-2 bg-white/30 " type="submit">Submit</button>
+    </form>
+    <div class="flex gap-4 flex-wrap">
+<% if(Notes.length>0){%>
+        <% Notes.forEach(function(val){ %>
+            <div class="w-74 px-3 py-4 rounded-2xl bg-zinc-500 mt-5 w-fit">
+                <h1 class="text-3xl text-white font-bold "><%= val%></h1>
+                <a class="text-zinc-800" href="">Read more</a>    
+                </div>
+        
+      <%  }) %>
+        <%} else{ %>
+            <h3 class="text-base text-white/30 mt-5">No Notes added</h3>
+            <% } %>
+        
+        <div class="w-74 hidden px-3 py-4 rounded-2xl bg-zinc-500 mt-5 ">
+            <h1 class="text-3xl text-white font-bold">Some Notes</h1>
+            <a class="text-zinc-800" href="">Read more</a>    
+            </div>
+            <div class="w-74 hidden px-3 py-4 rounded-2xl bg-zinc-500 mt-5 ">
+                <h1 class="text-3xl text-white font-bold">Some Notes</h1>
+                <a class="text-zinc-800" href="">Read more</a>    
+                </div>
+                
+    </div>
+</div>
+</body>
+</html>
