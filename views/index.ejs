@@ -17,8 +17,10 @@
         <% Notes.forEach(function(val){ %>
             <div class="w-74 px-3 py-4 rounded-2xl bg-zinc-500 mt-5 w-fit">
                 <h1 class="text-3xl text-white font-bold "><%= val%></h1>
-                <a class="text-zinc-800" href="">Read more</a>    
-                </div>
+                <div class="flex justify-between">
+                <a class="text-zinc-800 hover:underline" href="/Notes/<%= val%>">Read more</a>  
+                <a class="text-zinc-800 hover:underline" href="/Edit/<%= val%>">Edit</a>  
+                </div></div>
         
       <%  }) %>
         <%} else{ %>
